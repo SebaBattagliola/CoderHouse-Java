@@ -163,7 +163,6 @@ function obtenerProducto(codigo){
 }
 
 
-//Agregado por que no andaba la funcion comprar.
 function validarDatos(usuarioIngresado, passIngresado) {
     if (usuarioIngresado === usuarioCorrecto && passIngresado === contraseñaCorrecta) {
         return true;
