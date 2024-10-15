@@ -1,0 +1,164 @@
+/* --- Style proyecto CoderHouse --- */
+/* --- Market Place descentralizado --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+p {
+    color: #d3d3d3;
+}
+
+/* --- Barra de navegación --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff6b6b;
+}
+
+.nav-buttons .btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #ff4d4d;
+}
+
+/* --- Secciones --- */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin-bottom: 20px;
+}
+
+/* --- Botones --- */
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4d4d;
+}
+
+/* --- Formulario de login --- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #1e1e1e;
+    border: 1px solid #ff6b6b;
+    color: white;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- Estilos del footer --- */
+footer {
+    padding: 60px;
+    text-align: center;
+    background-color: #18233f;
+    color: #fffd;
+    font-size: 22px;
+}
+
+footer p {
+    color: #d3d3d3;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
