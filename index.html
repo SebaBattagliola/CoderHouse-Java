@@ -76,23 +76,20 @@
             </div>
         </section>
 
+        <section id="carrito" class="section">
+            <h2>Carrito de Compras</h2>
+            <ul id="listaCarrito"></ul>
+            <div class="carrito-buttons">
+                <button class="btn" id="confirmarCompra" onclick="confirmarCompra()" style="display:none;">Confirmar Compra</button>
+                <button class="btn" id="vaciarCarrito" onclick="vaciarCarrito()" style="display:none;">Vaciar Carrito</button>
+            </div>
+        </section>
+
         <!-- Sección de Productos -->
         <section id="productos" class="section">
             <h2>Productos Destacados</h2>
             <div class="product-container">
-                <div class="product">
-                    <h3>Producto 1</h3>
-                    <p>Descripción del producto.</p>
-                    <button class="btn comprar">Comprar</button>
-                    <button class="btn carrito">Agregar al Carrito</button>
-                </div>
-                <div class="product">
-                    <h3>Producto 2</h3>
-                    <p>Descripción del producto.</p>
-                    <button class="btn comprar">Comprar</button>
-                    <button class="btn carrito">Agregar al Carrito</button>
-                </div>
-                <!-- Más productos -->
+                <!--Productos generados en productos.js -->>
             </div>
         </section>
 
@@ -114,7 +111,9 @@
     </footer>
 
     <!-- Vinculación Javascript (arriba me daba error)-->
+    <script src="productos.js"></script>
     <script src= "Javas.js"></script>
 
 </body>
 </html>
+
