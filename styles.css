@@ -162,3 +162,83 @@ footer p {
         align-items: center;
     }
 }
+
+.product img.product-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+/* Carrito */
+
+#carrito {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#carrito h2 {
+    font-size: 1.8rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+#carrito ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#carrito li {
+    background-color: #2e2e2e;
+    color: #d3d3d3;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+/* --- Botones del carrito --- */
+#carrito .btn {
+    background-color: #ff6b6b;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.carrito-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 15px;}
+
+#carrito .btn:hover {
+    background-color: #ff4d4d;
+}
+
+#carrito .btn#confirmarCompra {
+    background-color: #28a745;
+}
+
+#carrito .btn#confirmarCompra:hover {
+    background-color: #218838;
+}
+
+#carrito .btn#vaciarCarrito {
+    background-color: #dc3545; 
+}
+
+#carrito .btn#vaciarCarrito:hover {
+    background-color: #c82333;
+}
