@@ -1,4 +1,4 @@
-/*Codigo no dado en clases - cerrar ventana emergente*/
+/* - Cerrar ventana emergente - */
 document.getElementById("close-popup").addEventListener("click", function() {
     document.getElementById("popup").style.display = "none";
 });
@@ -17,7 +17,6 @@ document.querySelector(".metamask").addEventListener("click", async function() {
     }
 });
 
-/* Inicio de codigo dictado en clases */ 
 
 /* --- Loggin y Register --- */ 
 
@@ -163,6 +162,7 @@ function obtenerProducto(codigo){
 }
 
 
+//Agregado por que no andaba la funcion comprar.
 function validarDatos(usuarioIngresado, passIngresado) {
     if (usuarioIngresado === usuarioCorrecto && passIngresado === contraseñaCorrecta) {
         return true;
@@ -170,4 +170,73 @@ function validarDatos(usuarioIngresado, passIngresado) {
         alert("Usuario o contraseña incorrectos.");
         return false;
     }
+}
+
+
+// Conectar MetaMask y mostrar balance de tokens
+document.querySelector(".metamask").addEventListener("click", async function() {
+    if (typeof window.ethereum !== 'undefined') {
+        try {
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+            alert("MetaMask conectado correctamente.");
+            mostrarBalance();
+        } catch (error) {
+            alert("Error al conectar con MetaMask: " + error.message);
+        }
+    } else {
+        alert("MetaMask no está instalado. Por favor, instálalo desde https://metamask.io/");
+    }
+});
+
+async function mostrarBalance() {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const balance = await provider.getBalance(signer.getAddress());
+    document.getElementById("token-balance").innerText = ethers.utils.formatEther(balance);
+}
+
+// Carrito
+let carrito = [];
+
+// Agregar un producto al carrito
+function agregarAlCarrito(nombreProducto, precio) {
+    carrito.push({ nombre: nombreProducto, precio: precio });
+    actualizarCarrito();
+}
+
+
+function actualizarCarrito() {
+    const listaCarrito = document.getElementById("listaCarrito");
+    listaCarrito.innerHTML = ""; 
+
+    carrito.forEach((producto) => {
+        const item = document.createElement("li");
+        item.innerText = `${producto.nombre} - $${producto.precio}`;
+        listaCarrito.appendChild(item);
+    });
+
+    document.getElementById("confirmarCompra").style.display = carrito.length > 0 ? "block" : "none";
+    document.getElementById("vaciarCarrito").style.display = carrito.length > 0 ? "block" : "none";
+}
+
+//Calculo de precios
+function calcularTotal() {
+    return carrito.reduce((total, producto) => total + producto.precio, 0);
+}
+
+function confirmarCompra() {
+    if (carrito.length > 0) {
+        const total = calcularTotal();
+        alert(`Compra confirmada. \nProductos: ${carrito.length}\nTotal: $${total}`);
+        carrito = [];  
+        actualizarCarrito();
+    } else {
+        alert("El carrito está vacío.");
+    }
+}
+
+//Vaciar carrito
+function vaciarCarrito() {
+    carrito = [];  
+    actualizarCarrito();
 }
