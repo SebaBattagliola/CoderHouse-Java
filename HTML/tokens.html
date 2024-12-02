@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/styles2.css">
+</head>
+<body>
+<!-- Adquirir Tokens -->
+<section id="tokens" class="section">
+    <h2>Adquirir Tokens BATTA</h2>
+    <p>Ingresa tus pesos, USDT o criptoactivo favorito para adquirir los BATTAS y comprar en la tienda, disfruta el servicio de staking y promociones mediante nuestro sistema de token.</p>
+</section>
+
+<!-- MetaMask -->
+<section id="metamask" class="section">
+    <h2>Conectar tu wallet MetaMask</h2>
+    <button class="btn metamask" onclick="mostrarBalanceSepolia()">Ver Balance</button>
+    <div id="balance">
+        <p>Balance: <span id="token-balance">0</span> tokens</p>
+    </div>
+</section>
+
+<section id="tokens" class="section">
+    <h2>Obtener Tokens BATTA</h2>
+    <div class="instructions-container">
+        <img src="../Imagenes/Metmask logo.jpg" alt="MetaMask Logo" class="metamask-logo">
+        <p>Sigue estos pasos para obtener tus tokens:</p>
+        <ol>
+            <li>Conecta tu billetera MetaMask a la red Sepolia.</li>
+            <li>Compra o solicita tokens BATTA desde la sección de tokens.</li>
+            <li>Disfruta de descuentos exclusivos en nuestra tienda.</li>
+</section>
+
+</body>
+
+<script src="../JS/balances.js"></script>
+<script src="../JS/Javas.js"></script>
+
+</html>

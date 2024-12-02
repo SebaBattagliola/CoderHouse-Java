@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/styles2.css">
+    <script src="../JS/productos.js"></script>
+</head>
+
+<body>
+    <section id="carrito" class="section">
+        <h2>Tienda BS-EC - Criptosistem </h2>
+        <ul id="listaCarrito"></ul>
+        <div class="carrito-buttons">
+            <button class="btn" id="confirmarCompra" onclick="confirmarCompra()" style="display:none;">Confirmar Compra</button>
+            <button class="btn" id="vaciarCarrito" onclick="vaciarCarrito()" style="display:none;">Vaciar Carrito</button>
+        </div>
+    </section>
+    
+    <div class="filter-container">
+        <select id="filtroPrecios" onchange="ordenarProductos(this.value)">
+            <option value="asc">Precio: Menor a Mayor</option>
+            <option value="desc">Precio: Mayor a Menor</option>
+        </select>
+    </div>
+    
+    
+    
+            <!-- Sección de Productos -->
+            <section id="productos" class="section">
+                <h2>Productos Destacados</h2>
+                    <div id="product-container" class="product-container"></div>
+            </section>
+
+
+    </body>
+    <script src="../JS/secciones.js"></script>
+    <script src="../JS/Javas.js"></script>
+</html>

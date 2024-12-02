@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda Batta</title>
+    <link rel="stylesheet" href="../CSS/styles2.css">
+    <link rel="icon" href="../Imagenes/seba64.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts externos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<!-- Contenido rigido -->
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Bienvenido a Tienda Batta</h2>
+            <p>Este es un comercio en línea donde se utilizan tokens BATTA para realizar transacciones, antes de comprar un producto por favor chequea las bases y condiciones de la pagina.</p>
+            <button class="btn" id="close-popup">Aceptar</button>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Tienda BS-EC</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="cargarPagina('inicio.html')">Inicio</a></li>
+                <li><a href="#" onclick="cargarPagina('loggin.html')">Login</a></li>
+                <li><a href="#" onclick="cargarPagina('tokens.html')">Tokens</a></li>
+                <li><a href="#" onclick="cargarPagina('productos.html')">Productos</a></li>
+                <li><a href="#" onclick="cargarPagina('bases.html')">Bases y Condiciones</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn carrito">Ver Carrito</button>
+            </div>
+        </nav>
+    </header>
+
+<!-- Contenido dinamico -->
+    <main id="contenido"></main>
+
+<!-- Footer -->
+    <footer class="footer-small">
+        <p>&copy; 2024 BS-EC Company se reserva los derechos.</p>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="../JS/secciones.js"></script>
+    <script src="../JS/productos.js"></script>
+    <script src="../JS/Javas.js"></script>
+    <script src="../JS/balances.js"></script>
+    <script src="../JS/loggin.js"></script>
+</body>
+
+</html>
