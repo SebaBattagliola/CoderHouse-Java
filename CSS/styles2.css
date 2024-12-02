@@ -1,0 +1,536 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+h1, h2, h3 {
+    color: #ff3333;  
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+p, h2, h3 {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* --- Barra de navegación --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff6b6b;
+}
+
+.nav-buttons .btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #ff4d4d;
+}
+
+
+/* --- Inicio de la Tienda --- */
+.intro-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-size: 2.6rem;
+    color: #ff3333;
+}
+
+.intro-content p.highlight {
+    font-size: 1.5rem;
+    color: #ffd700; 
+    font-weight: bold;
+    margin: 25px auto;
+}
+
+.subheader {
+    font-size: 2rem;
+    color: #32cd32; 
+    margin: 30px 0;
+}
+
+.additional-info {
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+.section-title {
+    font-size: 2rem;
+    color: #ff3333;
+    text-align: center;
+    margin: 40px auto;
+    font-weight: bold;
+    max-width: 900px;
+    border-bottom: 2px solid #ff3333;
+    padding-bottom: 10px;
+}
+
+.benefits-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.benefits-list li {
+    background: #282828;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.benefits-list li:hover {
+    transform: scale(1.05);
+    background: #333333;
+}
+
+.final-note {
+    font-size: 1.4rem;
+    color: #32cd32; 
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+/* Productos */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.product {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #d3d3d3;
+}
+
+.product button {
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #28a745;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+
+/* --- Filtros de ordenado --- */
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+#filtroPrecios {
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #1e1e1e;
+    border: 1px solid #ff6b6b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#filtroPrecios:hover {
+    background-color: #ff6b6b;
+    color: #000;
+}
+
+#filtroPrecios option {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+
+/* --- Bases y Condiciones --- */
+.bases-container {
+    padding: 60px 20px;
+    margin: 0 auto;
+    color: #d3d3d3;
+    max-width: 90%;
+    text-align: left;
+}
+
+.bases-container h2 {
+    font-size: 1.8rem;
+    color: #ff3333;
+    margin-top: 35px;
+}
+
+.bases-container p {
+    margin: 15px auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #d0d0d0;
+}
+
+.bases-container div {
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+}
+
+
+.divider {
+    height: 2px;
+    background: #ff3333;
+    width: 80px;
+    margin: 30px auto;
+    border-radius: 1px;
+}
+
+/* --- Botones --- */
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #ffffff;
+    background: linear-gradient(to right, #ff6b6b, #ff4d4d);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff4d4d, #ff6b6b);
+    transform: translateY(-2px);
+}
+
+
+.btn-form {
+    width: 100%; 
+    padding: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #32cd32; 
+    border: none;
+    color: #ffffff;
+}
+
+.btn-form:hover {
+    background-color: #28a745; 
+}
+
+
+.btn-metamask{
+display: flex;
+margin: 20px auto; 
+padding: 12px 25px;
+background: linear-gradient(to right, #6a11cb, #2575fc); 
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+
+.btn-metamask:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.05);
+}
+
+/* --- Responsive Buttons --- */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .btn-form {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .btn-ordenar, .btn-metamask {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .benefits-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .intro-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .subheader, .bases-container h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Tokens */
+
+.balance-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+
+.instructions-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.instructions-container img {
+    max-width: 380px;
+    margin-bottom: 20px;
+}
+
+.instructions-container ol {
+    text-align: left;
+    color: #d3d3d3;
+    margin: 15px auto;
+    padding-left: 20px;
+}
+
+
+/*Loggin*/
+
+
+.body-loggin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.login-container h2, .registro-container h2 {
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Inputs loggin */
+input[type="text"], 
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff6b6b;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+button {
+    padding: 10px 15px;
+    background-color: #32cd32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #28a745;
+}
+
+
+.register-link {
+    margin-top: 20px;
+}
+
+
+
+
+
+/* Footer */
+.footer-small {
+    background-color: #18233f;
+    color: #ffffff;
+    padding: 21px 0; 
+    font-size: 1.5rem; 
+    text-align: center;
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    bottom: 0;
+}
+
+.footer-small p {
+    color: #d3d3d3;
+    margin: 0;
+    text-align: center;
+}
+
+#main-title {
+    font-size: 2.8rem;  
+    color: #ffd700;  
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.bases-container h2 {
+    font-size: 1.7rem;  
+    color: #ff3333;  
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+
+
